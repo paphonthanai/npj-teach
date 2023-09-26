@@ -1,0 +1,10 @@
+/* @media screen and (min-width: 375px) and (max-width: 767px) {
+    .home-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+ 
+ 
+    /* ปรับแต่งสไตล์สำหรับหน้าจอที่มีความกว้างระหว่าง 375px ถึง 767px */
+/* } */
