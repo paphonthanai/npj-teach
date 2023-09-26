@@ -1,319 +1,89 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/style.css">
-    <link rel="stylesheet" href="/public/style.css">
-    <!-- <link rel="stylesheet" media="screen and (max-width: 375px)" href="/widescreen.css"> -->
-    <link rel="stylesheet" media="screen and (max-width: 375px)" href="/public/widescreen.css">
-    <script src="/public/index.js"></script>
-    <!-- <script>
-        setTimeout(function() {
-            let introDiv = document.querySelector(".section-home-info");
-            introDiv.style.opacity = 0; // จะทำให้ .intro สลายลงเป็นโปร่งใส
-        }, 10000); // 30 วินาที        
-    </script> -->
-    <title>PNJTeach.co</title>
-</head>
-<body>
-    <nav>
-        <div class="logo">
-            <h2>NPJTeach</h2>
-            <h2>NPJTeach</h2>
-        </div>
-        
-        <div class="menu-btn" id="menu-btn">
-            <div class="menu-bar-icon"></div>
-        </div>
-        <!-- <div class="menu-btn">
-            <button>Menu</button> -->
-        <!-- </div> -->
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Welcome to Firebase Hosting</title>
 
-        <div class="menu-bar">
-            <ul class="menu" id="menu-bar">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#portforio">Portforio</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
+    <!-- update the version number as needed -->
+    <script defer src="/__/firebase/10.4.0/firebase-app-compat.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/10.4.0/firebase-auth-compat.js"></script>
+    <script defer src="/__/firebase/10.4.0/firebase-database-compat.js"></script>
+    <script defer src="/__/firebase/10.4.0/firebase-firestore-compat.js"></script>
+    <script defer src="/__/firebase/10.4.0/firebase-functions-compat.js"></script>
+    <script defer src="/__/firebase/10.4.0/firebase-messaging-compat.js"></script>
+    <script defer src="/__/firebase/10.4.0/firebase-storage-compat.js"></script>
+    <script defer src="/__/firebase/10.4.0/firebase-analytics-compat.js"></script>
+    <script defer src="/__/firebase/10.4.0/firebase-remote-config-compat.js"></script>
+    <script defer src="/__/firebase/10.4.0/firebase-performance-compat.js"></script>
+    <!-- 
+      initialize the SDK after all desired features are loaded, set useEmulator to false
+      to avoid connecting the SDK to running emulators.
+    -->
+    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
 
+    <style media="screen">
+      body { background: #ECEFF1; color: rgba(0,0,0,0.87); font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
+      #message { background: white; max-width: 360px; margin: 100px auto 16px; padding: 32px 24px; border-radius: 3px; }
+      #message h2 { color: #ffa100; font-weight: bold; font-size: 16px; margin: 0 0 8px; }
+      #message h1 { font-size: 22px; font-weight: 300; color: rgba(0,0,0,0.6); margin: 0 0 16px;}
+      #message p { line-height: 140%; margin: 16px 0 24px; font-size: 14px; }
+      #message a { display: block; text-align: center; background: #039be5; text-transform: uppercase; text-decoration: none; color: white; padding: 16px; border-radius: 4px; }
+      #message, #message a { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); }
+      #load { color: rgba(0,0,0,0.4); text-align: center; font-size: 13px; }
+      @media (max-width: 600px) {
+        body, #message { margin-top: 0; background: white; box-shadow: none; }
+        body { border-top: 16px solid #ffa100; }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="message">
+      <h2>Welcome</h2>
+      <h1>Firebase Hosting Setup Complete</h1>
+      <p>You're seeing this because you've successfully setup Firebase Hosting. Now it's time to go build something extraordinary!</p>
+      <a target="_blank" href="https://firebase.google.com/docs/hosting/">Open Hosting Documentation</a>
+    </div>
+    <p id="load">Firebase SDK Loading&hellip;</p>
 
-    
-    <div class="home-container" id="home">
-        <div class="section-home-info">
-            <div class="logo-animation">
-                <b>N</b>
-                <b>P</b>
-                <b>J</b>
-                <b>T</b>
-                <b>e</b>
-                <b>a</b>
-                <b>c</b>
-                <b>h</b>
-            </div>  
-        </div>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const loadEl = document.querySelector('#load');
+        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+        // // The Firebase SDK is initialized and available here!
+        //
+        // firebase.auth().onAuthStateChanged(user => { });
+        // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
+        // firebase.firestore().doc('/foo/bar').get().then(() => { });
+        // firebase.functions().httpsCallable('yourFunction')().then(() => { });
+        // firebase.messaging().requestPermission().then(() => { });
+        // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
+        // firebase.analytics(); // call to activate
+        // firebase.analytics().logEvent('tutorial_completed');
+        // firebase.performance(); // call to activate
+        //
+        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
 
-        <div class="section-home">
-
-            <div class="left-section" onmouseover="ChangeTextCaptionUp()"
-            onmouseout="ChangeTextCaptionDown()" >
-
-                <div class="title-caption">
-                    <b class="caption">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Waking up to the world of code and coding is what I love."</b>
-                </div>
-
-                <div class="container-caption">
-                    <div></div>
-
-                    <div class="text-caption">
-                        <p id="text-caption-p">
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;It's not just about seeing coding as a job
-                            <span id="changeText"><span>"But"</span></span>
-                            it's a driving force that makes me wake up every morning with enthusiasm to learn and create.
-                            <br> 
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Because I understand the importance of continuous learning in the world of technology.
-                        </p>
-                    </div>
-                    <div class="try-hover">
-                        <div class="text" id="text" >
-                            <h1>My Skill</h1>
-                        </div>
-                    </div>
-                    <!-- <div class="try-hover" >
-                        <h1>การตื่นตาตื่นใจในโลกของโค้ดและการเขียนโค้ดคือสิ่งที่เป็นที่รักของผม
-                            </h1>
-                    </div> -->
-                </div>
-            </div>
-            <script>
-                function ChangeTextCaptionUp() {
-                    let TextCaption = document.getElementById('text')
-                    let TextChange = document.getElementById("changeText");
-                    let ChangeTextColor = document.getElementById("text-caption-p");
-
-                    TextCaption.style.backgroundColor = '#fff';
-                    TextCaption.style.color = '#000';
-                    TextCaption.style.webkitTextStroke = '1px #000';
-                    TextChange.innerHTML = `<span style="color:#fff; font-weight:bold;" id="changeText">"But"</span>`
-                    ChangeTextColor.style.color = '#fff';
-                    ChangeTextColor.style.fontWeight = "1000";
-                    
-                    //console.log(TextChange);
-                    //console.log(TextCaption);
-
-                
-                }
-                function ChangeTextCaptionDown() {
-                    let ChangeTextColor = document.getElementById("text-caption-p");
-                    let TextCaption = document.getElementById('text')
-                    let TextChange = document.getElementById("changeText");
-
-                    TextCaption.style.backgroundColor = '#000';
-                    TextCaption.style.color = '#fff';
-                    TextCaption.style.webkitTextStroke = '0px';
-                    TextChange.innerHTML = `<span style="color:none; font-weight:bold;" id="changeText">"But"</span>`
-                    ChangeTextColor.style.color = "rgb(56, 47, 88)";
-                    ChangeTextColor.style.fontWeight = "0";
-
-                    //console.log(TextChange);
-                    //console.log(TextCaption);
-                }
-            </script>
-            
-            <div class="right-section" onmouseover="ChangeBoxSkill()"
-            onmouseout="unChangeBoxSkill()">
-                <img style="overflow:hidden;" src="https://upload.wikimedia.org/wikipedia/commons/3/3d/Code-1076536.jpg "  alt="" class="bg-img">
-                <div class="text-hidden" id="text-hidden" >
-                   <h3>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"การตื่นตาตื่นใจในโลกของโค้ดและการเขียนโค้ดคือสิ่งที่เป็นที่รักของผม"
-                   </h3>
-                </div>
-                <div class="text-animation-fix-center">
-                    <div class="text-animation-area">
-                        <div class="text-animation" id="text-animation">
-                            <h1>Programmers</h1></div>
-                        </div>
-                        <div class="text-th-caption" id="text-hover" onmouseover="TextHover()" 
-                        onmouseleave="TextUnHover()">
-                            <h1>
-                                Try moving your mouse 
-                                <br> over there.
-                            </h1>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <script>
-                let TextHieden = document.getElementById('text-hidden');
-                let TextOnHover = document.getElementById('text-hover');
-
-                function ChangeBoxSkill() {
-                    let textAnimationBox = document.getElementById('text-animation');
-                    textAnimationBox.style.background = '#FFF';
-                    textAnimationBox.style.color = "red";
-                    TextHieden.style.scale = 1.1;
-                    TextHieden.style.color = "#000";
-                    TextHieden.style.webkitTextStroke = "1px #000" 
-                }
-
-                function unChangeBoxSkill() {
-                    let textAnimationBox = document.getElementById('text-animation');
-                    textAnimationBox.style.background = 'red';
-                    textAnimationBox.style.color = "#FFF";
-                    TextHieden.style.scale = 1.0;
-                    TextHieden.style.color = "#fff";
-                    TextHieden.style.webkitTextStroke = "1px #fff" 
-                }
-
-                function TextHover() {
-                    TextOnHover.style.textShadow = '2px 2px #fff';
-                }
-                
-                function TextUnHover() {
-                    TextOnHover.style.textShadow = 'none';
-                }
-
-
-                document.addEventListener("DOMContentLoaded", function () {
-                    const textAnimation = document.querySelector(".text-animation h1");
-                    const textSets = ["HTML", "CSS", "JavaScript", "PHP", "MySQL" , "Node.Js", "Python", "C++"];
-                    let currentIndex = 0;
-                    let isAnimating = false; // เพิ่มตัวแปรเพื่อตรวจสอบสถานะการเคลื่อนไหว
-                    textAnimation.style.transform = "translateY(50%)"               
-                    function moveText() {       
-                        if (window.innerWidth <= 560) {
-                            if (isAnimating) return; // ถ้ากำลังเคลื่อนไหวอยู่แล้ว ไม่ต้องทำอะไร
-                            isAnimating = true; // กำลังเริ่มเคลื่อนไหว
-                            //textAnimation.style.transform = textAnimation_style_transform
-                            textAnimation.style.transform = "translateY(50%)"
-                            textAnimation.style.opacity = 1;    
-                            setTimeout(function () {
-                                textAnimation.style.transform = "translateY(-100%)"; // เลื่อนข้อความหายไปด้านบน
-                            }, 3000); // รอ 3 วินาทีแล้วค่อยเริ่มการเลื่อนข้อความหายไป
-    
-                            setTimeout(function () {
-                                textAnimation.style.opacity = 0;    
-                                textAnimation.style.transform = "translateY(100%)"; // เลื่อนข้อความหายไปด้านบน
-                                isAnimating = false; // เคลื่อนไหวเสร็จสิ้น
-                                changeText() // เมื่อเคลื่อนไหวเสร็จสิ้น แทนที่ข้อความ
-                            }, 6000); // รอ 3 วินาทีแล้วค่อยเริ่มการเลื่อนข้อความหายไป
-                        
-                            function changeText() {
-                                textAnimation.textContent = textSets[currentIndex];
-                                currentIndex = (currentIndex + 1) % textSets.length;
-                            }                 
-                             
-                        } else if (window.innerWidth > 560) {
-                            if (isAnimating) return; // ถ้ากำลังเคลื่อนไหวอยู่แล้ว ไม่ต้องทำอะไร
-                            isAnimating = true; // กำลังเริ่มเคลื่อนไหว
-                           
-                            
-                            textAnimation.style.transform = "translateY(20%)"
-                            textAnimation.style.opacity = 1;    
-                            
-                            setTimeout(function () {
-                                textAnimation.style.transform = "translateY(-100%)"; // เลื่อนข้อความหายไปด้านบน
-                            }, 3000); // รอ 3 วินาทีแล้วค่อยเริ่มการเลื่อนข้อความหายไป
-    
-                            setTimeout(function () {
-                                textAnimation.style.opacity = 0;    
-                                textAnimation.style.transform = "translateY(100%)"; // เลื่อนข้อความหายไปด้านบน
-                                isAnimating = false; // เคลื่อนไหวเสร็จสิ้น
-                                changeText() // เมื่อเคลื่อนไหวเสร็จสิ้น แทนที่ข้อความ
-                            }, 6000); // รอ 3 วินาทีแล้วค่อยเริ่มการเลื่อนข้อความหายไป
-                        
-                            function changeText() {
-                                textAnimation.textContent = textSets[currentIndex];
-                                currentIndex = (currentIndex + 1) % textSets.length;
-                            } 
-                                        
-                        }                
-
-                    }
-                    setInterval(moveText, 8000);
-                    console.log(textAnimation);
-                });
-
-
-            </script>
-        </div>
-    
-    <!-- <div class="section-about" id="about">
-        <div class="list-section">
-            <div class="section-box">
-                <ul>
-                    <li><button>Founder</button></li>
-                    <li><button>Skill</button></li>
-                    <li><button>Activity</button></li>
-                </ul>
-            </div>
-        </div>
-        <div class="image-section">
-            <div class="profile-box" id="profile-block"> -->
-
-
-                <!-- <img id="aboutImage" src="/img/profile/Mypicture/founder.jpg" alt=""> -->
-
-<!-- 
-            </div>
-        </div>
-        <div class="descript-section" id="about">
-            <div class="descript" id="about-descript"> -->
-                <!-- <h1 align="center">About Founder</h1> -->
-                <!-- <div class="th-descript">
-                    <fieldset style="border: none; width: 100%">
-                        <legend align="start"><h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;การตื่นตาตื่นใจในโลกของโค้ดและการเขียนโค้ดคือสิ่งที่เป็นที่รักของผม</h1></legend>
-                        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
-                            <!-- <b>"การตื่นตาตื่นใจในโลกของโค้ดและการเขียนโค้ดคือสิ่งที่เป็นที่รักของผม"</b> -->
-                        <!-- </p>
-                        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            <b>ไม่เพียงแค่ดูการเขียนโค้ดเป็นงานหน้า แต่มันเป็นแรงผลักดันที่ทำให้ผมตื่นขึ้นทุกเช้าด้วยความกระตือรือร้นที่จะเรียนรู้และสร้างสรรค์สิ่งใหม่ๆอยู่เสมอ 
-                            <u>เพราะผมมองเห็นความสำคัญของการเรียนรู้ที่ไม่มีที่สิ้นสุดในโลกของเทคโนโลยี</u></b>
-                        </p>
-                        <p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-                            <b><i>ทุกวันนี้เทคโนโลยีกำลังเปลี่ยนแปลงอย่างรวดเร็ว</i></b>
-                            ผมจึงเรียนรู้และพัฒนาตนเองให้ตามทันเทคโนโลยีอยู่เสมอ จากประสบการณ์และความผิดพลาดอย่างไม่หยุดยั้ง
-                            และรับมือกับความท้าทายที่ปรากฏในโลกของโค้ด โดยใช้ความอดทนและความชอบที่มีต่อเทคโนโลยีเป็นแรงผลักดันในการทำงาน
-                            และหวังว่าในอนาคตฉันจะสามารถสร้างผลงานที่สร้างความเปลี่ยนแปลงในโลกหรือเป็นส่วนหนึ่งของการนำเทคโนโลยีมาใช้ให้เกิดประโยชน์แก่สังคม
-                            ด้วยความคิดสร้างสรรค์และความพยายามอย่างไม่หยุดยั้ง ฉันกำลังค้นหาโอกาสที่จะสร้างงานที่เต็มไปด้วยความคืบหน้าและสร้างมูลค่าจริงในโลกของเทคโนโลยี.</i>
-                        </p>
-                    </fieldset>
-                </div>
-                 
-                <div class="eng-descript">
-                  <fieldset style="border: none; width: 100%; margin-top:50px;" > -->
-                    <!-- <legend><h2>&nbsp;&nbsp;&nbsp;&nbsp;About Founder&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h2></legend> </legend> -->
-                    <!-- <p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <b>"Waking up to the world of code and coding is what I love."</b> 
-                        It's not just about seeing coding as a job;
-                        it's a driving force that makes me wake up every morning with enthusiasm to learn and create. 
-                        Because I understand the importance of continuous learning in the world of technology.
-                    </p>
-                    <p>
-                        Today, technology is changing rapidly, so I strive to learn and self-improve constantly.
-                        I learn from experiences and mistakes without stopping, 
-                        facing the challenges that arise in the coding world with perseverance and a passion for technology as my driving force in my work.
-                        I hope that in the future, I'll be able to create work that brings about change in the world or contributes to using technology for the betterment of society. 
-                        With creativity and unwavering dedication, I'm actively seeking opportunities to build a career filled with progress and real value in the world of technology.
-                    </p>
-                    </fieldset>  
-                </div>
-                
-            </div>
-        </div>
-    </div> -->
-<!-- 
-    <div class="section-portforio" id="portforio">
-
-    </div> -->
-<!-- 
-    <div class="section-contact" id="contact">
-
-    </div> -->
-    
-</body>
+        try {
+          let app = firebase.app();
+          let features = [
+            'auth', 
+            'database', 
+            'firestore',
+            'functions',
+            'messaging', 
+            'storage', 
+            'analytics', 
+            'remoteConfig',
+            'performance',
+          ].filter(feature => typeof app[feature] === 'function');
+          loadEl.textContent = `Firebase SDK loaded with ${features.join(', ')}`;
+        } catch (e) {
+          console.error(e);
+          loadEl.textContent = 'Error loading the Firebase SDK, check the console.';
+        }
+      });
+    </script>
+  </body>
 </html>
