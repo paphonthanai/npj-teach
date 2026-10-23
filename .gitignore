@@ -64,3 +64,6 @@ node_modules/
 
 # dotenv environment variables file
 .env
+
+# ผลลัพธ์ของ npm run import:ff
+tools/import-ff/out/
